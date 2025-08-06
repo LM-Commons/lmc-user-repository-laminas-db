@@ -55,7 +55,7 @@ final class DbFactory implements FactoryInterface
             $hydrator,
             new $entityClass(),
             $options->getTableName(),
-            $options->getRolesDelimiter(),
+            $options->getIdFieldName(),
         );
     }
 }
