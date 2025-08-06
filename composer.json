@@ -1,5 +1,5 @@
 {
-  "name": "lmc/lmc-user-repository-laminas-db",
+  "name": "lm-commons/lmc-user-repository-laminas-db",
   "description": "Laminas Db based Lmc User Repository",
   "minimum-stability": "dev",
   "prefer-stable": true,
