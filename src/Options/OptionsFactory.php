@@ -16,7 +16,7 @@ final class OptionsFactory implements FactoryInterface
     /**
      * @inheritDoc
      */
-    public function __invoke(ContainerInterface $container, string $requestedName, ?array $options = null): Options
+    public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null): Options
     {
         $config = $container->get('config');
         assert(is_array($config));

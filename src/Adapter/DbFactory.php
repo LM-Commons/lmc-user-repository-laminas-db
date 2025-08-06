@@ -20,7 +20,7 @@ final class DbFactory implements FactoryInterface
     /**
      * @inheritDoc
      */
-    public function __invoke(ContainerInterface $container, string $requestedName, ?array $options = null): Db
+    public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null): Db
     {
         /** @var Options $options */
         $options   = $container->get(Options::class);

@@ -16,7 +16,7 @@ final class UserHydratorFactory implements FactoryInterface
     /**
      * @inheritDoc
      */
-    public function __invoke(ContainerInterface $container, string $requestedName, ?array $options = null): UserHydrator
+    public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null): UserHydrator
     {
         /** @var HydratorInterface $baseHydrator */
         $baseHydrator = $container->get('lmcuser_base_hydrator');
