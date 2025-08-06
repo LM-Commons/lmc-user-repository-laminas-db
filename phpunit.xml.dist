@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         bootstrap="./vendor/autoload.php"
+         colors="true"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+         cacheDirectory=".phpunit.cache"
+         displayDetailsOnTestsThatTriggerWarnings="true"
+>
+  <testsuite name="Lmc User Repository Laminas Db tests">
+    <directory>./test</directory>
+  </testsuite>
+  <source>
+    <include>
+      <directory>./src</directory>
+    </include>
+  </source>
+  <php>
+    <const name="DB_DRIVER" value="sqlite"/>
+    <const name="DB_MYSQL_DSN" value="mysql:host=localhost;dbname=lmc_user"/>
+    <const name="DB_MYSQL_USERNAME" value="root"/>
+    <const name="DB_MYSQL_PASSWORD" value="test"/>
+    <const name="DB_MYSQL_SCHEMA" value="./data/schema.mysql.sql"/>
+    <const name="DB_SQLITE_DSN" value="sqlite::memory:"/>
+    <const name="DB_SQLITE_USERNAME" value=""/>
+    <const name="DB_SQLITE_PASSWORD" value=""/>
+    <const name="DB_SQLITE_SCHEMA" value="./data/schema.sqlite.sql"/>
+  </php>
+</phpunit>

@@ -1,0 +1,72 @@
+{
+  "name": "lmc/lmc-user-repository-laminas-db",
+  "description": "Laminas Db based Lmc User Repository",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Eric Richer",
+      "email": "eric.richer@vistoconsulting.com"
+    }
+  ],
+  "require": {
+    "php": "~8.2.0 || ~8.3.0 || ~8.4.0",
+    "laminas/laminas-eventmanager": "^3.0",
+    "laminas/laminas-db": "^2.20",
+    "laminas/laminas-hydrator": "^4.3",
+    "laminas/laminas-servicemanager": "^3.23 || ^4.4",
+    "lm-commons/lmc-user-repository": "1.0.x-dev"
+  },
+  "require-dev": {
+    "laminas/laminas-coding-standard": "^3.0",
+    "phpunit/phpunit": "^11.5 || ^12.3",
+    "psalm/plugin-phpunit": "^0.19",
+    "vimeo/psalm": "^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Lmc\\User\\Repository\\Db\\" : "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "LmcTest\\User\\Repository\\Db\\": "test/"
+    }
+  },
+  "extra": {
+    "laminas": {
+      "config-provider": "Lmc\\User\\Repository\\Db\\ConfigProvider"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    },
+    "platform": {
+      "php": "8.2.99"
+    }
+  },
+  "scripts": {
+    "check": [
+      "@cs-check",
+      "@test"
+    ],
+    "test": "phpunit",
+    "test-coverage": "phpunit --coverage-clover ./build/logs/clover.xml",
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf",
+    "test-coverage-html": "phpunit --coverage-html ./build/html",
+    "static-analysis": "psalm --shepherd --stats"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "c:/lm-commons/lmc-user-repository"
+    },
+    {
+      "type": "git",
+      "url": "c:/lm-commons/lmc-authentication"
+    }
+  ]
+}
