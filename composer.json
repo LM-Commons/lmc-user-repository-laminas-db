@@ -62,7 +62,7 @@
   "repositories": [
     {
       "type": "git",
-      "url": "c:/lm-commons/lmc-user-repository"
+      "url": "https://github.com/LM-Commons/lmc-user-repository.git"
     },
     {
       "type": "git",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "487ae99b2d369c697c6d1b2deee240cc",
+    "content-hash": "37de0a5068302cc48cb8e4d2e6d3d79d",
     "packages": [
         {
             "name": "brick/varexporter",
@@ -421,7 +421,7 @@
             "source": {
                 "type": "git",
                 "url": "c:/lm-commons/lmc-authentication",
-                "reference": "d48408912a49f42427ec74b5d8db7b188dd12b24"
+                "reference": "98a47ac529b67c52f0e5577a1a973083ecb60cda"
             },
             "require": {
                 "laminas/laminas-servicemanager": "^3.15 || ^4.0",
@@ -492,15 +492,15 @@
                 "laminas",
                 "mezzio"
             ],
-            "time": "2025-08-05T01:05:30+00:00"
+            "time": "2025-08-06T15:48:02+00:00"
         },
         {
             "name": "lm-commons/lmc-user-repository",
             "version": "1.0.x-dev",
             "source": {
                 "type": "git",
-                "url": "c:/lm-commons/lmc-user-repository",
-                "reference": "3a0e57b7b6a3d8d754ea3004f3b41f9105167da1"
+                "url": "https://github.com/LM-Commons/lmc-user-repository.git",
+                "reference": "15bf03e003ed47b0b0a5a6c823f6b24bc57374a5"
             },
             "require": {
                 "lm-commons/lmc-authentication": "1.0.x-dev",
@@ -514,11 +514,6 @@
             },
             "default-branch": true,
             "type": "library",
-            "extra": {
-                "laminas": {
-                    "config-provider": "Lmc\\User\\Repository\\ConfigProvider"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Lmc\\User\\Repository\\": "src/"
@@ -563,7 +558,7 @@
                 }
             ],
             "description": "Lmc User Repository Common",
-            "time": "2025-08-05T21:29:22+00:00"
+            "time": "2025-08-06T19:03:41+00:00"
         },
         {
             "name": "nikic/php-parser",
