@@ -1,9 +1,6 @@
 {
   "exclude": [
     {
-      "name": "PHPUnit"
-    },
-    {
       "name": "Psalm"
     }
   ]

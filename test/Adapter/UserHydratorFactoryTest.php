@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace LmcTest\User\Repository\Db\Adapter;
 
-use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
 use Laminas\ServiceManager\ServiceManager;
 use Lmc\User\Repository\Db\Adapter\UserHydrator;
 use Lmc\User\Repository\Db\Adapter\UserHydratorFactory;
 use Lmc\User\Repository\Db\ConfigProvider;
+use Lmc\User\Repository\Db\Exception\ServiceNotCreatedException;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerExceptionInterface;

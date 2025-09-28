@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace LmcTest\User\Repository\Db\Options;
 
-use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
 use Laminas\ServiceManager\ServiceManager;
+use Lmc\User\Repository\Db\Exception\ServiceNotCreatedException;
 use Lmc\User\Repository\Db\Options\Options;
 use Lmc\User\Repository\Db\Options\OptionsFactory;
 use PHPUnit\Framework\Attributes\CoversClass;

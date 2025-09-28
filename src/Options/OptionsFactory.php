@@ -4,19 +4,15 @@ declare(strict_types=1);
 
 namespace Lmc\User\Repository\Db\Options;
 
-use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
-use Laminas\ServiceManager\Factory\FactoryInterface;
+use Lmc\User\Repository\Db\Exception\ServiceNotCreatedException;
 use Psr\Container\ContainerInterface;
 
 use function assert;
 use function is_array;
 
-final class OptionsFactory implements FactoryInterface
+final class OptionsFactory
 {
-    /**
-     * @inheritDoc
-     */
-    public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null): Options
+    public function __invoke(ContainerInterface $container): Options
     {
         $config = $container->get('config');
         assert(is_array($config));

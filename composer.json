@@ -15,11 +15,11 @@
     "laminas/laminas-eventmanager": "^3.0",
     "laminas/laminas-db": "^2.20",
     "laminas/laminas-hydrator": "^4.3",
-    "laminas/laminas-servicemanager": "^3.23 || ^4.4",
     "lm-commons/lmc-user-repository": "1.0.x-dev"
   },
   "require-dev": {
     "laminas/laminas-coding-standard": "^3.0",
+    "laminas/laminas-servicemanager": "^3.23 || ^4.4",
     "phpunit/phpunit": "^11.5 || ^12.3",
     "psalm/plugin-phpunit": "^0.19",
     "vimeo/psalm": "^6.0"
@@ -58,15 +58,5 @@
     "cs-fix": "phpcbf",
     "test-coverage-html": "phpunit --coverage-html ./build/html",
     "static-analysis": "psalm --shepherd --stats"
-  },
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/LM-Commons/lmc-user-repository.git"
-    },
-    {
-      "type": "git",
-      "url": "c:/lm-commons/lmc-authentication"
-    }
-  ]
+  }
 }

@@ -6,8 +6,7 @@ namespace Lmc\User\Repository\Db\Adapter;
 
 use Laminas\Db\Adapter\Adapter;
 use Laminas\Hydrator\HydratorInterface;
-use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
-use Laminas\ServiceManager\Factory\FactoryInterface;
+use Lmc\User\Repository\Db\Exception\ServiceNotCreatedException;
 use Lmc\User\Repository\Db\Options\Options;
 use Psr\Container\ContainerInterface;
 
@@ -15,12 +14,9 @@ use function gettype;
 use function is_object;
 use function sprintf;
 
-final class DbFactory implements FactoryInterface
+final class DbFactory
 {
-    /**
-     * @inheritDoc
-     */
-    public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null): Db
+    public function __invoke(ContainerInterface $container): Db
     {
         /** @var Options $options */
         $options   = $container->get(Options::class);
