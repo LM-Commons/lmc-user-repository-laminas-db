@@ -6,7 +6,7 @@ Authentication middleware for Mezzio applications
 
 ## Requirements
 
-- PHP 8.2 or higher
+- PHP 8.2 or 8.3 (laminas-db does not support PHP > 8.3)
 
 ## Installation
 

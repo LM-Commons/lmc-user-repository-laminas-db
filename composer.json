@@ -11,7 +11,7 @@
     }
   ],
   "require": {
-    "php": "~8.2.0 || ~8.3.0 || ~8.4.0",
+    "php": "~8.2.0 || ~8.3.0",
     "laminas/laminas-eventmanager": "^3.0",
     "laminas/laminas-db": "^2.20",
     "laminas/laminas-hydrator": "^4.3",
