@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace LmcTest\User\Repository\Db\Adapter;
 
 use Laminas\Db\Adapter\Adapter;
-use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
 use Laminas\ServiceManager\ServiceManager;
 use Lmc\User\Repository\AdapterInterface;
 use Lmc\User\Repository\Db\Adapter\DbFactory;
 use Lmc\User\Repository\Db\ConfigProvider;
+use Lmc\User\Repository\Db\Exception\ServiceNotCreatedException;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\Exception;
 use PHPUnit\Framework\TestCase;

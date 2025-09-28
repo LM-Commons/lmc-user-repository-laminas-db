@@ -7,22 +7,15 @@ namespace Lmc\User\Repository\Db\Adapter;
 use Laminas\Hydrator\ClassMethodsHydrator;
 use Laminas\Hydrator\HydratorInterface;
 use Laminas\Hydrator\Strategy\ExplodeStrategy;
-use Laminas\ServiceManager\Factory\FactoryInterface;
 use Lmc\User\Repository\Db\Options\Options;
 use Psr\Container\ContainerInterface;
 
 use function assert;
 
-final class BaseUserHydratorFactory implements FactoryInterface
+final class BaseUserHydratorFactory
 {
-    /**
-     * @inheritDoc
-     */
-    public function __invoke(
-        ContainerInterface $container,
-        string $requestedName,
-        ?array $options = null
-    ): HydratorInterface {
+    public function __invoke(ContainerInterface $container): HydratorInterface
+    {
         $hydrator = new ClassMethodsHydrator();
         /** @var Options $commonOptions */
         $commonOptions = $container->get(Options::class);
