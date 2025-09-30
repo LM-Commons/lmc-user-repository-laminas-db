@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "085fadb98092b1aea6e72cc6e9383e21",
+    "content-hash": "bc46ce6e846122928d26b53faf20eca9",
     "packages": [
         {
             "name": "laminas/laminas-db",
@@ -282,82 +282,15 @@
             "time": "2024-10-29T13:46:07+00:00"
         },
         {
-            "name": "lm-commons/lmc-authentication",
-            "version": "1.0.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LM-Commons/lmc-authentication.git",
-                "reference": "f97b09365aeacf881cb51809efe74438c82db85c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LM-Commons/lmc-authentication/zipball/f97b09365aeacf881cb51809efe74438c82db85c",
-                "reference": "f97b09365aeacf881cb51809efe74438c82db85c",
-                "shasum": ""
-            },
-            "require": {
-                "laminas/laminas-stdlib": "^3.1",
-                "php": "~8.2.0 || ~8.3.0 || ~8.4.0",
-                "psr/http-message": "^1.0.1 || ^2.0",
-                "psr/http-server-middleware": "^1.0",
-                "webmozart/assert": "^1.11"
-            },
-            "require-dev": {
-                "laminas/laminas-coding-standard": "^3.1",
-                "phpunit/phpunit": "^11.5",
-                "psalm/plugin-phpunit": "^0.19.5",
-                "vimeo/psalm": "^6.10"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "laminas": {
-                    "config-provider": "Lmc\\Authentication\\ConfigProvider"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Lmc\\Authentication\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Eric Richer",
-                    "email": "eric.richer@vistoconsulting.com"
-                }
-            ],
-            "description": "Laminas Mezzio Authentication",
-            "keywords": [
-                "Authentication",
-                "laminas",
-                "mezzio"
-            ],
-            "support": {
-                "issues": "https://github.com/LM-Commons/lmc-authentication/issues",
-                "source": "https://github.com/LM-Commons/lmc-authentication/tree/1.0.x"
-            },
-            "time": "2025-09-09T15:47:12+00:00"
-        },
-        {
             "name": "lm-commons/lmc-user-repository",
-            "version": "1.0.x-dev",
+            "version": "dev-1.0.x-authenticate",
             "source": {
                 "type": "git",
-                "url": "https://github.com/LM-Commons/lmc-user-repository.git",
-                "reference": "c8dec3bfc3505b508f1a0bb3a2529579bd3f6353"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LM-Commons/lmc-user-repository/zipball/c8dec3bfc3505b508f1a0bb3a2529579bd3f6353",
-                "reference": "c8dec3bfc3505b508f1a0bb3a2529579bd3f6353",
-                "shasum": ""
+                "url": "c:/lm-commons/lmc-user-repository",
+                "reference": "483747ae444d62c2038561ad93ba8f50c13d4695"
             },
             "require": {
-                "lm-commons/lmc-authentication": "1.0.x-dev",
+                "mezzio/mezzio-authentication": "^1.10",
                 "php": "~8.2.0 || ~8.3.0 || ~8.4.0"
             },
             "require-dev": {
@@ -372,7 +305,30 @@
                     "Lmc\\User\\Repository\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "check": [
+                    "@cs-check",
+                    "@test"
+                ],
+                "test": [
+                    "phpunit"
+                ],
+                "test-coverage": [
+                    "phpunit --coverage-clover ./build/logs/clover.xml"
+                ],
+                "cs-check": [
+                    "phpcs"
+                ],
+                "cs-fix": [
+                    "phpcbf"
+                ],
+                "test-coverage-html": [
+                    "phpunit --coverage-html ./build/html"
+                ],
+                "static-analysis": [
+                    "psalm --shepherd --stats"
+                ]
+            },
             "license": [
                 "BSD-3-Clause"
             ],
@@ -383,11 +339,140 @@
                 }
             ],
             "description": "Lmc User Repository Interface",
-            "support": {
-                "issues": "https://github.com/LM-Commons/lmc-user-repository/issues",
-                "source": "https://github.com/LM-Commons/lmc-user-repository/tree/1.0.x"
+            "time": "2025-09-30T03:17:01+00:00"
+        },
+        {
+            "name": "mezzio/mezzio-authentication",
+            "version": "1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mezzio/mezzio-authentication.git",
+                "reference": "9aa6602d186ba68411b0e7ca6960f24c4089b74e"
             },
-            "time": "2025-09-09T20:57:22+00:00"
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mezzio/mezzio-authentication/zipball/9aa6602d186ba68411b0e7ca6960f24c4089b74e",
+                "reference": "9aa6602d186ba68411b0e7ca6960f24c4089b74e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
+                "psr/container": "^1.0 || ^2.0",
+                "psr/http-message": "^1.0.1 || ^2.0.0",
+                "psr/http-server-middleware": "^1.0",
+                "webmozart/assert": "^1.11.0"
+            },
+            "conflict": {
+                "container-interop/container-interop": "<1.2.0",
+                "zendframework/zend-expressive-authentication": "*"
+            },
+            "require-dev": {
+                "ext-sqlite3": "*",
+                "laminas/laminas-coding-standard": "~3.0.1",
+                "phpunit/phpunit": "^10.5.45",
+                "psalm/plugin-phpunit": "^0.19.5",
+                "vimeo/psalm": "^6.10.1"
+            },
+            "suggest": {
+                "ext-pdo": "*: for use with the PDO-backed UserRepositoryInterface implementation",
+                "mezzio/mezzio-authentication-basic": "Provides an HTTP Basic Authentication AuthenticationInterface implementation",
+                "mezzio/mezzio-authentication-laminasauthentication": "Provides a laminas-authentication AuthenticationInterface implementation",
+                "mezzio/mezzio-authentication-session": "Provides a username/password + session AuthenticationInterface implementation"
+            },
+            "type": "library",
+            "extra": {
+                "laminas": {
+                    "config-provider": "Mezzio\\Authentication\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mezzio\\Authentication\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Authentication middleware for Mezzio and PSR-7 applications",
+            "homepage": "https://mezzio.dev",
+            "keywords": [
+                "Authentication",
+                "http",
+                "laminas",
+                "mezzio",
+                "middleware",
+                "psr-15",
+                "psr-7"
+            ],
+            "support": {
+                "chat": "https://laminas.dev/chat",
+                "docs": "https://docs.mezzio.dev/mezzio-authentication/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/mezzio/mezzio-authentication/issues",
+                "rss": "https://github.com/mezzio/mezzio-authentication/releases.atom",
+                "source": "https://github.com/mezzio/mezzio-authentication"
+            },
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
+            "time": "2025-04-29T09:17:58+00:00"
+        },
+        {
+            "name": "psr/container",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/container.git",
+                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/c71ecc56dfe541dbd90c5360474fbc405f8d5963",
+                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Container\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common Container Interface (PHP FIG PSR-11)",
+            "homepage": "https://github.com/php-fig/container",
+            "keywords": [
+                "PSR-11",
+                "container",
+                "container-interface",
+                "container-interop",
+                "psr"
+            ],
+            "support": {
+                "issues": "https://github.com/php-fig/container/issues",
+                "source": "https://github.com/php-fig/container/tree/2.0.2"
+            },
+            "time": "2021-11-05T16:47:00+00:00"
         },
         {
             "name": "psr/http-message",
@@ -3304,16 +3389,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "11.5.41",
+            "version": "11.5.42",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b42782bcb947d2c197aea42ce9714ee2d974b283"
+                "reference": "1c6cb5dfe412af3d0dfd414cfd110e3b9cfdbc3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b42782bcb947d2c197aea42ce9714ee2d974b283",
-                "reference": "b42782bcb947d2c197aea42ce9714ee2d974b283",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/1c6cb5dfe412af3d0dfd414cfd110e3b9cfdbc3c",
+                "reference": "1c6cb5dfe412af3d0dfd414cfd110e3b9cfdbc3c",
                 "shasum": ""
             },
             "require": {
@@ -3385,7 +3470,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.41"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.42"
             },
             "funding": [
                 {
@@ -3409,7 +3494,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-09-24T06:32:10+00:00"
+            "time": "2025-09-28T12:09:13+00:00"
         },
         {
             "name": "psalm/plugin-phpunit",
@@ -3468,59 +3553,6 @@
                 "source": "https://github.com/psalm/psalm-plugin-phpunit/tree/0.19.5"
             },
             "time": "2025-03-31T18:49:55+00:00"
-        },
-        {
-            "name": "psr/container",
-            "version": "2.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/container.git",
-                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/c71ecc56dfe541dbd90c5360474fbc405f8d5963",
-                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Container\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "https://www.php-fig.org/"
-                }
-            ],
-            "description": "Common Container Interface (PHP FIG PSR-11)",
-            "homepage": "https://github.com/php-fig/container",
-            "keywords": [
-                "PSR-11",
-                "container",
-                "container-interface",
-                "container-interop",
-                "psr"
-            ],
-            "support": {
-                "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/2.0.2"
-            },
-            "time": "2021-11-05T16:47:00+00:00"
         },
         {
             "name": "psr/http-factory",
@@ -6009,7 +6041,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "~8.2.0 || ~8.3.0 || ~8.4.0"
+        "php": "~8.2.0 || ~8.3.0"
     },
     "platform-dev": {},
     "platform-overrides": {

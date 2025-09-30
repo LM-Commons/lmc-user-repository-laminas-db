@@ -15,7 +15,7 @@
     "laminas/laminas-eventmanager": "^3.0",
     "laminas/laminas-db": "^2.20",
     "laminas/laminas-hydrator": "^4.3",
-    "lm-commons/lmc-user-repository": "1.0.x-dev"
+    "lm-commons/lmc-user-repository": "1.0.x-authenticate-dev"
   },
   "require-dev": {
     "laminas/laminas-coding-standard": "^3.0",
@@ -58,5 +58,11 @@
     "cs-fix": "phpcbf",
     "test-coverage-html": "phpunit --coverage-html ./build/html",
     "static-analysis": "psalm --shepherd --stats"
-  }
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "c:/lm-commons/lmc-user-repository"
+    }
+  ]
 }
