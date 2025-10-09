@@ -87,7 +87,7 @@ class User implements UserInterface
     public function getIdentity(): string
     {
         if (null === $this->id) {
-            return '';
+            return (string) null;
         }
         return (string) $this->id;
     }
@@ -103,11 +103,17 @@ class User implements UserInterface
         return $this;
     }
 
+    /**
+     *@inheritDoc
+     */
     public function getDetail(string $name, $default = null)
     {
-        return null;
+        return $default;
     }
 
+    /**
+     * @inheritDoc
+     */
     public function getDetails(): array
     {
         return [];
