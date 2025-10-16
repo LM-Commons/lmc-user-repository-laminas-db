@@ -25,8 +25,10 @@ final readonly class UserHydrator implements HydratorInterface
         assert($object instanceof UserEntityInterface);
 
         $data = $this->hydrator->extract($object);
-        // identity is a construct that does not map to a column
+        // identity, detail and details are constructs that do not map to a column
         unset($data['identity']);
+        unset($data['detail']);
+        unset($data['details']);
         return $this->mapField('id', $this->idColumn, $data);
     }
 
