@@ -84,10 +84,10 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getIdentity(): ?string
+    public function getIdentity(): string
     {
         if (null === $this->id) {
-            return null;
+            return (string) null;
         }
         return (string) $this->id;
     }
@@ -101,5 +101,21 @@ class User implements UserInterface
     {
         $this->roles = iterator_to_array($roles);
         return $this;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getDetail(string $name, $default = null)
+    {
+        return $default;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getDetails(): array
+    {
+        return [];
     }
 }
