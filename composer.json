@@ -15,7 +15,7 @@
     "laminas/laminas-eventmanager": "^3.0",
     "laminas/laminas-db": "^2.20",
     "laminas/laminas-hydrator": "^4.3",
-    "lm-commons/lmc-user-repository": "1.0.x-authenticate-dev"
+    "lm-commons/lmc-user-repository": "1.0.x-dev"
   },
   "require-dev": {
     "laminas/laminas-coding-standard": "^3.0",
