@@ -104,7 +104,7 @@ class User implements UserInterface
     }
 
     /**
-     *@inheritDoc
+     * @inheritDoc
      */
     public function getDetail(string $name, $default = null)
     {
