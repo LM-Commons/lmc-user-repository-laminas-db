@@ -58,11 +58,5 @@
     "cs-fix": "phpcbf",
     "test-coverage-html": "phpunit --coverage-html ./build/html",
     "static-analysis": "psalm --shepherd --stats"
-  },
-  "repositories": [
-    {
-      "type": "git",
-      "url": "c:/lm-commons/lmc-user-repository"
-    }
-  ]
+  }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "52059e316faeb98057bbe2f30d93b700",
+    "content-hash": "18594621e63b6a220a9f4754fdb71092",
     "packages": [
         {
             "name": "laminas/laminas-db",
@@ -286,8 +286,14 @@
             "version": "1.0.x-dev",
             "source": {
                 "type": "git",
-                "url": "c:/lm-commons/lmc-user-repository",
+                "url": "https://github.com/LM-Commons/lmc-user-repository.git",
                 "reference": "8ad55771a8b734058c499639846e6425946b694c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LM-Commons/lmc-user-repository/zipball/8ad55771a8b734058c499639846e6425946b694c",
+                "reference": "8ad55771a8b734058c499639846e6425946b694c",
+                "shasum": ""
             },
             "require": {
                 "mezzio/mezzio-authentication": "^1.10",
@@ -305,30 +311,7 @@
                     "Lmc\\User\\Repository\\": "src/"
                 }
             },
-            "scripts": {
-                "check": [
-                    "@cs-check",
-                    "@test"
-                ],
-                "test": [
-                    "phpunit"
-                ],
-                "test-coverage": [
-                    "phpunit --coverage-clover ./build/logs/clover.xml"
-                ],
-                "cs-check": [
-                    "phpcs"
-                ],
-                "cs-fix": [
-                    "phpcbf"
-                ],
-                "test-coverage-html": [
-                    "phpunit --coverage-html ./build/html"
-                ],
-                "static-analysis": [
-                    "psalm --shepherd --stats"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -339,6 +322,10 @@
                 }
             ],
             "description": "Lmc User Repository Interface",
+            "support": {
+                "issues": "https://github.com/LM-Commons/lmc-user-repository/issues",
+                "source": "https://github.com/LM-Commons/lmc-user-repository/tree/1.0.x"
+            },
             "time": "2025-10-16T02:29:00+00:00"
         },
         {
