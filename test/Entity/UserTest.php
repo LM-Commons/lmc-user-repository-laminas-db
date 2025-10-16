@@ -18,7 +18,7 @@ final class UserTest extends TestCase
         $this->assertNull($user->getDisplayName());
         $this->assertNull($user->getState());
         $this->assertNull($user->getPassword());
-        $this->assertNull($user->getIdentity());
+        $this->assertEquals('', $user->getIdentity());
         $this->assertIsArray($user->getRoles());
         $this->assertEmpty($user->getRoles());
     }
