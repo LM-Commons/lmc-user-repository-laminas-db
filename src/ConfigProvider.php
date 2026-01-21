@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Lmc\User\Repository\Db;
 
 use Laminas\Db\Adapter\Adapter;
+use Lmc\User\Repository\AdapterInterface;
 use Lmc\User\Repository\Db\Adapter\BaseUserHydratorFactory;
 use Lmc\User\Repository\Db\Adapter\DbFactory;
 use Lmc\User\Repository\Db\Adapter\UserHydrator;
@@ -34,7 +35,7 @@ final class ConfigProvider
             'factories' => [
                 'lmcuser_default_hydrator' => BaseUserHydratorFactory::class,
                 Options::class             => OptionsFactory::class,
-                UserInterface::class       => DbFactory::class,
+                AdapterInterface::class    => DbFactory::class,
                 UserHydrator::class        => UserHydratorFactory::class,
             ],
         ];
