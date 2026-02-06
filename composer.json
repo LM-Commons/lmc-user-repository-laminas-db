@@ -20,7 +20,7 @@
   "require-dev": {
     "laminas/laminas-coding-standard": "^3.0",
     "laminas/laminas-servicemanager": "^3.23 || ^4.4",
-    "phpunit/phpunit": "^11.5 || ^12.3",
+    "phpunit/phpunit": "^13.0",
     "psalm/plugin-phpunit": "^0.19",
     "vimeo/psalm": "^6.0"
   },
