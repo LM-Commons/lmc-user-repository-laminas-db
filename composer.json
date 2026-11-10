@@ -21,7 +21,7 @@
     "laminas/laminas-coding-standard": "^3.0",
     "laminas/laminas-servicemanager": "^3.23 || ^4.4",
     "phpunit/phpunit": "^11.5 || ^12.3",
-    "psalm/plugin-phpunit": "^0.19",
+    "psalm/plugin-phpunit": "^1.0",
     "vimeo/psalm": "^6.0"
   },
   "autoload": {
